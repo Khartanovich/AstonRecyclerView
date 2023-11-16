@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactsFragment">
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.astonrecyclerview.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment"
+            app:popUpTo="@id/contactsFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.astonrecyclerview.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+</navigation>
